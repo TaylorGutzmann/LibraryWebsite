@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Login Page</title></head>
+<body>
+   <h1>Login</h1>
+      <form action="#" th:action="@{/Welcome}" th:object="${formCommand}" method="post">
+   
+   		<table class="prettytable">
+   		<tr><td>CardNo </td>	<td><input type="text" th:field="*{cardNo}" /></td></tr>
+   		<tr><td>Password </td>  <td><input type="text" th:field="*{password}" /></td></tr>
+   		
+   		<tr>
+   		<td><input type="submit" value="Login" /></td>
+   		<td><input type="reset" value="Reset" /></td>
+   		
+   		</tr>
+   		
+   		</table>
+</form>
+	<h3>New here?</h3>
+<form name='newUser' method='GET'>
+ 	<button formaction="NewUser">Sign up!</button>
+ 	</form>
+</body>
+</html>

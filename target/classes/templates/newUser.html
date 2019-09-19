@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>New User Page</title></head>
+<body>
+   <h1>New User</h1>
+   <form action="#" th:action="@{/NewUser}" th:object="${formCommand}" method="post">
+   
+   		<table class="prettytable">
+   		<tr><td>CardNo </td>	<td><input type="text" th:field="*{cardNo}" /></td></tr>
+   		<tr><td>Name </td>		<td><input type="text" th:field="*{name}" /></td></tr>
+   		<tr><td>Address </td> 	<td><input type="text" th:field="*{address}" /></td></tr>
+   		<tr><td>Phone 	</td>   <td><input type="text" th:field="*{phone}" /></td></tr>
+   		<tr><td>Password </td>  <td><input type="text" th:field="*{password}" /></td></tr>
+   		
+   		<tr>
+   		<td><input type="submit" value="Create User" /></td>
+   		<td><input type="reset" value="Reset" /></td>
+   		
+   		</tr>
+   		
+   		</table>
+</form>
+	<h3>Already have an account?</h3>
+<form name='newUser' method='GET'>
+ 	<button formaction="Login">Login</button>
+ 	</form>
+</body>
+</html>

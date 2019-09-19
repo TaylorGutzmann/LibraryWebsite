@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Books in the library</title>
+   <link rel="stylesheet" type="text/css" href="../../css/example.css" />    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    
+    <h1>Authors for this book</h1>
+    <table class = "prettytable">
+    
+    <tr>
+    <th>Title</th>
+    <th>Author</th>
+    
+    </tr>
+    
+     <tr th:each="bookAuthors: ${bookAuthors}">
+        <td th:text="${bookAuthors.title}"/>
+        <td th:text="${bookAuthors.authorName}"/>
+        
+
+    </tr>
+    
+    
+    </table> 
+    <h1>Address of this branch</h1>
+    <table class = "prettytable">
+    
+    <tr>
+    <th>Address</th>
+    
+    </tr>
+    
+     <tr th:each="bookAddress: ${branchAddress}">
+        <td th:text="${bookAddress.branchAddress}"/>
+
+    </tr>
+
+    
+    
+    </table> 
+    <form name='goBack' method='GET'>
+ 	<button formaction="../../Welcome">Go Back!</button>
+ 	</form>
+ 	<form name='checkout' method='GET'>
+ 	<button formaction="../../Checkout">Checkout this book!</button>
+ 	</form>
+    
+    
+</body>
+</html>
